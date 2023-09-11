@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Great+Vibes&family=Hanken+Grotesk:wght@500;700;800&family=Manrope:wght@500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800;900&family=Nunito:wght@600;700;800&family=Poppins:wght@900&family=Public+Sans:wght@300;400;700&family=Wix+Madefor+Text:wght@400;500;800&display=swap");
+/*
+===============
+Variables
+===============
+*/
+$darkBlue: hsl(233, 26%, 24%);
+$lime__green: hsl(136, 65%, 51%);
+$bright__cyan: hsl(192, 70%, 51%);
+$neutral: hsl(0, 0%, 100%);
+$veryLightGray: hsl(0, 0%, 98%);
+$lightGrayishBlue: hsl(220, 16%, 96%);
+$grayishBlue: hsl(233, 8%, 62%);
+$font_size_small: 18px;
+$font__family: "Public Sans", sans-serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font__family;
+  width: calc(100vw - 20px);
+  max-width: 1440px;
+  margin: 1% auto;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/*
+===============
+Header Section
+===============
+*/
+#header {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $neutral;
+    height: 7vh;
+    &__logo {
+    }
+    &__links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      li {
+        a {
+          font-size: $font_size_small;
+          font-weight: 600;
+        }
+      }
+    }
+    &__btn {
+      outline: none;
+      border: none;
+      border-radius: 5rem;
+      padding: 1rem 3rem;
+      font-size: $font_size_small;
+      font-weight: 600;
+      background-color: $lime__green;
+      background-image: linear-gradient(
+        315deg,
+        $bright__cyan 0%,
+        $lime__green 74%
+      );
+      color: $neutral;
+      cursor: pointer;
+    }
+  }
+}
+
+/*
+===============
+Hero Section
+===============
+*/
+#hero {
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background: $neutral;
+    &__left {
+      h1 {
+        font-weight: 400;
+        font-size: 65px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 24px;
+        color: $grayishBlue;
+        margin: 10px 0;
+        width: 75%;
+      }
+      &__btn {
+        margin-block-start: 20px;
+        outline: none;
+        border: none;
+        border-radius: 5rem;
+        padding: 1rem 3rem;
+        font-size: $font_size_small;
+        font-weight: 600;
+        background-color: $lime__green;
+        background-image: linear-gradient(
+          315deg,
+          $bright__cyan 0%,
+          $lime__green 74%
+        );
+        color: $neutral;
+        cursor: pointer;
+      }
+    }
+    &__right {
+      background: url(../images/bg-intro-desktop.svg) no-repeat;
+      //   background-position: top 0deg right 360deg;
+      background-size: 900px 866px;
+
+      &__img {
+        img {
+          // clip-path: rectangle(0% 0% 0% 50%);
+        }
+      }
+    }
+  }
+}
+
+/*
+===============
+About Section
+===============
+*/
+#about {
+  background: $lightGrayishBlue;
+  margin-block-start: -10%;
+  padding: 100px;
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__header {
+      h2 {
+        font-size: 25px;
+        font-weight: 400;
+      }
+      p {
+        font-size: 18px;
+        color: $grayishBlue;
+        width: 50%;
+        line-height: 24px;
+        margin: 10px 0;
+      }
+    }
+    &__cards {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .about__card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        h3 {
+          font-size: 20px;
+          font-weight: 400;
+          margin: 10px 0;
+        }
+        p {
+          font-size: 18px;
+          color: $grayishBlue;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
+
+/*
+===============
+Article Section
+===============
+*/
+#article {
+  .article {
+    padding: 50px;
+    &__header {
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+      }
+    }
+    &__cards {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-block-start: 50px;
+      .article__card {
+        width: 300px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 20px;
+
+        &__image {
+          width: 270px;
+          height: 200px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &__content {
+          margin-top: 20px;
+          small {
+            font-size: 12px;
+            color: $grayishBlue;
+            line-height: 24px;
+            margin: 20px 0;
+          }
+          h3 {
+            font-size: 20px;
+            font-weight: 400;
+            margin: 10px 0;
+          }
+          p {
+            font-size: 18px;
+            color: $grayishBlue;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+===============
+Footer Section
+===============
+*/
+#footer {
+  .footer {
+    background: $darkBlue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+
+    &__left {
+      width: 60%;
+      &__links {
+        display: flex;
+        justify-content: space-around;
+        .social__links {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          .logo {
+            display: flex;
+            align-items: center;
+            &__image {
+              width: 30px;
+              height: 20px;
+              background: url(../images/logo.svg);
+            }
+
+            h4 {
+              color: $neutral;
+              font-size: 20px;
+            }
+          }
+          .social__handles {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+        ul {
+          li {
+            a {
+              color: $neutral;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+    &__right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      button {
+        outline: none;
+        border: none;
+        border-radius: 5rem;
+        padding: 1rem 3rem;
+        font-size: $font_size_small;
+        font-weight: 600;
+        background-color: $lime__green;
+        background-image: linear-gradient(
+          315deg,
+          $bright__cyan 0%,
+          $lime__green 74%
+        );
+        color: $neutral;
+        cursor: pointer;
+      }
+      small {
+        font-size: 12px;
+        color: $grayishBlue;
+        line-height: 24px;
+      }
+    }
+  }
+}
